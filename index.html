@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pink Oaks - 3 & 4 BHK Luxury Boutique Residences in Bani Park, Jaipur. 18 Exclusive Homes designed for privacy, elegance, and modern family living.">
+    <title>Pink Oaks | Luxury 3 & 4 BHK Boutique Residences in Bani Park, Jaipur</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="site-preloader" id="site-preloader">
+        <div class="preloader-content">
+            <img src="logo.webp" alt="Pink Oaks" class="preloader-logo-img">
+            <div class="preloader-sub">BANI PARK, JAIPUR</div>
+            <div class="preloader-bar-wrap">
+                <div class="preloader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo" aria-label="Pink Oaks Bani Park">
+                <img src="logo.webp" alt="Pink Oaks" class="site-logo-img">
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">HOME</a></li>
+                    <li><a href="address.html" class="nav-link">ADDRESS</a></li>
+                    <li><a href="residences.html" class="nav-link">RESIDENCES</a></li>
+                    <li><a href="amenities.html" class="nav-link">AMENITIES</a></li>
+                    <li><a href="residences.html#floor-plans" class="nav-link">FLOOR PLANS</a></li>
+                    <li><a href="site-visit.html" class="nav-link">SITE VISIT</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:9772297772" class="btn-phone">
+                    <svg class="icon-phone" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>97722-97772</span>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg-visual" id="hero-bg-visual"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        A LIFE BEYOND<br>
+                        ORDINARY.
+                    </h1>
+                    
+                    <div class="hero-divider">❖</div>
+
+                    <p class="hero-tagline">
+                        3 & 4 BHK LUXURY APARTMENTS | 18 BOUTIQUE RESIDENCES<br>
+                        <strong>AN ADDRESS THAT WAS NEVER FOR SALE</strong> | BANI PARK, JAIPUR
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="site-visit.html" class="btn-primary">
+                            BOOK A SITE VISIT <span class="arrow">→</span>
+                        </a>
+                        <button class="btn-secondary trigger-modal-brochure">
+                            DOWNLOAD E-BROCHURE <span class="arrow">↓</span>
+                        </button>
+                    </div>
+
+                    <div class="rera-badge">
+                        <span class="rera-icon">®</span>
+                        <span class="rera-text">RERA No. RAJ/P/2025/3489 | www.rera.rajasthan.gov.in</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 Pillars Highlight Bar -->
+        <section class="pillars-section">
+            <div class="container">
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon icon-bg-pink">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="pillar-title">BOUTIQUE LIVING</h3>
+                        <p class="pillar-desc">Just 18 exclusive residences for unmatched privacy.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon icon-bg-blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="pillar-title">PRIME ADDRESS</h3>
+                        <p class="pillar-desc">In the heart of Bani Park, Jaipur.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon icon-bg-taupe">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+                            </svg>
+                        </div>
+                        <h3 class="pillar-title">TIMELESS DESIGN</h3>
+                        <p class="pillar-desc">Architecture that blends heritage inspiration with modern living.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon icon-bg-sage">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M12 8v8M8 12h8"/>
+                            </svg>
+                        </div>
+                        <h3 class="pillar-title">GREEN & SERENE</h3>
+                        <p class="pillar-desc">Landscaped spaces for calm, light and fresh air.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon icon-bg-darksage">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="pillar-title">TRUST & TRANSPARENCY</h3>
+                        <p class="pillar-desc">RERA registered for complete peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thoughtfully Crafted Section (Residences Spotlight) -->
+        <section class="spotlight-section" id="residences">
+            <div class="container">
+                <div class="spotlight-grid">
+                    <div class="spotlight-text">
+                        <div class="floral-motif">❖</div>
+                        <h2 class="section-title">
+                            OLD-MONEY ADDRESS.<br>
+                            NEW-AGE HOME.
+                        </h2>
+                        <p class="spotlight-paragraph">
+                            Bani Park doesn't open up often. When it does, it doesn't stay open long. Pink Oaks is a boutique collection of just 18 residences with Nahargarh Fort rising behind you and the walled Pink City just 1.5 km ahead.
+                        </p>
+                        <p class="spotlight-paragraph" style="font-size: 0.88rem; opacity: 0.85; margin-top: -12px;">
+                            Thoughtfully Vastu-aligned by 265 Degree Consultants with 10 ft ceilings, generous balconies, and complete privacy.
+                        </p>
+                        <a href="residences.html" class="btn-primary">
+                            EXPLORE RESIDENCES <span class="arrow">→</span>
+                        </a>
+                    </div>
+                    <div class="spotlight-visual">
+                        <div class="interior-image-frame">
+                            <div class="interior-crop-bg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities Preview Section -->
+        <section class="amenities-section" id="amenities">
+            <div class="container">
+                <div class="amenities-layout">
+                    <div class="amenities-header">
+                        <h2 class="section-title">
+                            AMENITIES<br>
+                            THAT ENRICH<br>
+                            EVERYDAY
+                        </h2>
+                        <p class="section-subtext">
+                            Curated amenities for comfort, wellness and community.
+                        </p>
+                        <a href="amenities.html" class="link-arrow">
+                            VIEW ALL AMENITIES <span class="arrow">→</span>
+                        </a>
+                    </div>
+
+                    <div class="amenities-grid">
+                        <div class="amenity-card">
+                            <div class="amenity-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/>
+                                    <circle cx="12" cy="9" r="2.5"/>
+                                </svg>
+                            </div>
+                            <h3 class="amenity-title">LANDSCAPED GARDEN</h3>
+                        </div>
+
+                        <div class="amenity-card">
+                            <div class="amenity-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8zM6 1v3M10 1v3M14 1v3"/>
+                                </svg>
+                            </div>
+                            <h3 class="amenity-title">CLUB LOUNGE</h3>
+                        </div>
+
+                        <div class="amenity-card">
+                            <div class="amenity-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h2M13 10h2M9 14h2M13 14h2"/>
+                                </svg>
+                            </div>
+                            <h3 class="amenity-title">ROOFTOP TERRACE</h3>
+                        </div>
+
+                        <div class="amenity-card">
+                            <div class="amenity-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <path d="M12 8v4l3 3"/>
+                                </svg>
+                            </div>
+                            <h3 class="amenity-title">24x7 SECURITY</h3>
+                        </div>
+
+                        <div class="amenity-card">
+                            <div class="amenity-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 11.2 2 11.6 2 12v4c0 .6.4 1 1 1h2"/>
+                                    <circle cx="7" cy="17" r="2"/>
+                                    <circle cx="17" cy="17" r="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="amenity-title">COVERED PARKING</h3>
+                        </div>
+
+                        <div class="amenity-card">
+                            <div class="amenity-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                </svg>
+                            </div>
+                            <h3 class="amenity-title">POWER BACKUP</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connected Address Location Section -->
+        <section class="location-section" id="location">
+            <div class="container">
+                <div class="location-grid">
+                    <div class="map-container">
+                        <div id="theme-map" class="theme-map-box"></div>
+                        <div class="map-badge-overlay">
+                            <span class="badge-icon">❖</span>
+                            <span class="badge-title">PINK OAKS — BANI PARK</span>
+                        </div>
+                    </div>
+
+                    <div class="location-text">
+                        <div class="floral-motif">❖</div>
+                        <h2 class="section-title">A CONNECTED ADDRESS</h2>
+                        <span class="location-subhead">BANI PARK, JAIPUR</span>
+                        <p class="location-paragraph">
+                            An address that keeps you close to everything that matters — schools, hospitals, markets, cultural landmarks and transport.
+                        </p>
+
+                        <!-- Filter category tabs -->
+                        <div class="location-filter-tabs">
+                            <button class="loc-tab active" data-filter="all">ALL</button>
+                            <button class="loc-tab" data-filter="transit">CONNECTIVITY</button>
+                            <button class="loc-tab" data-filter="shopping">SHOPPING & HERITAGE</button>
+                        </div>
+
+                        <ul class="distance-list">
+                            <li class="distance-item" data-landmark="mi-road" data-type="shopping">
+                                <span class="place-name"><svg class="pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> M.I. Road</span>
+                                <span class="dots"></span>
+                                <span class="time-value">5 mins</span>
+                            </li>
+                            <li class="distance-item" data-landmark="railway" data-type="transit">
+                                <span class="place-name"><svg class="pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Railway Station</span>
+                                <span class="dots"></span>
+                                <span class="time-value">10 mins</span>
+                            </li>
+                            <li class="distance-item" data-landmark="cscheme" data-type="shopping">
+                                <span class="place-name"><svg class="pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> C-Scheme</span>
+                                <span class="dots"></span>
+                                <span class="time-value">10 mins</span>
+                            </li>
+                            <li class="distance-item" data-landmark="citypalace" data-type="shopping">
+                                <span class="place-name"><svg class="pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> City Palace</span>
+                                <span class="dots"></span>
+                                <span class="time-value">15 mins</span>
+                            </li>
+                            <li class="distance-item" data-landmark="airport" data-type="transit">
+                                <span class="place-name"><svg class="pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Jaipur International Airport</span>
+                                <span class="dots"></span>
+                                <span class="time-value">25 mins</span>
+                            </li>
+                        </ul>
+
+                        <a href="address.html" class="link-arrow">
+                            EXPLORE LOCATION & ADDRESS <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floor Plans Section -->
+        <section class="floorplans-section" id="floor-plans">
+            <div class="container">
+                <div class="section-header-center">
+                    <div class="floral-motif">❖</div>
+                    <h2 class="section-title">CHOOSE YOUR HOME</h2>
+                    <p class="section-subtext">Explore our thoughtfully planned residences.</p>
+                </div>
+
+                <div class="floorplan-cards-grid">
+                    <!-- Flat A -->
+                    <div class="plan-card">
+                        <div class="plan-card-header">
+                            <h3 class="plan-name">FLAT TYPE A</h3>
+                            <span class="plan-badge">3 BHK</span>
+                        </div>
+                        <div class="plan-specs">
+                            <span class="spec-label">Sale Area: 2,260 sq.ft.</span>
+                            <span class="spec-val">Built-up: 1,615 sq.ft.</span>
+                        </div>
+                        <div class="plan-image-frame" data-plan="flat-a">
+                            <div class="plan-crop-bg crop-flat-a"></div>
+                            <div class="plan-overlay-zoom">
+                                <span class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Click to inspect layout</span>
+                            </div>
+                        </div>
+                        <button class="plan-action-btn trigger-modal-floorplan" data-plan="flat-a">
+                            VIEW FLOOR PLAN <span class="arrow">→</span>
+                        </button>
+                    </div>
+
+                    <!-- Flat B -->
+                    <div class="plan-card">
+                        <div class="plan-card-header">
+                            <h3 class="plan-name">FLAT TYPE B</h3>
+                            <span class="plan-badge badge-4bhk">4 BHK</span>
+                        </div>
+                        <div class="plan-specs">
+                            <span class="spec-label">Sale Area: 2,635 sq.ft.</span>
+                            <span class="spec-val">Built-up: 1,880 sq.ft.</span>
+                        </div>
+                        <div class="plan-image-frame" data-plan="flat-b">
+                            <div class="plan-crop-bg crop-flat-b"></div>
+                            <div class="plan-overlay-zoom">
+                                <span class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Click to inspect layout</span>
+                            </div>
+                        </div>
+                        <button class="plan-action-btn trigger-modal-floorplan" data-plan="flat-b">
+                            VIEW FLOOR PLAN <span class="arrow">→</span>
+                        </button>
+                    </div>
+
+                    <!-- Flat C -->
+                    <div class="plan-card">
+                        <div class="plan-card-header">
+                            <h3 class="plan-name">FLAT TYPE C</h3>
+                            <span class="plan-badge">3 BHK</span>
+                        </div>
+                        <div class="plan-specs">
+                            <span class="spec-label">Sale Area: 2,170 sq.ft.</span>
+                            <span class="spec-val">Built-up: 1,550 sq.ft.</span>
+                        </div>
+                        <div class="plan-image-frame" data-plan="flat-c">
+                            <div class="plan-crop-bg crop-flat-c"></div>
+                            <div class="plan-overlay-zoom">
+                                <span class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Click to inspect layout</span>
+                            </div>
+                        </div>
+                        <button class="plan-action-btn trigger-modal-floorplan" data-plan="flat-c">
+                            VIEW FLOOR PLAN <span class="arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call To Action Banner -->
+        <section class="cta-banner-section">
+            <div class="container">
+                <div class="cta-banner-card">
+                    <div class="cta-visual-side">
+                        <div class="blossom-banner-bg"></div>
+                    </div>
+                    <div class="cta-content-side">
+                        <h2 class="cta-title">LET'S TAKE THE NEXT STEP</h2>
+                        <p class="cta-paragraph">
+                            Experience Pink Oaks in person. Book your private site visit today.
+                        </p>
+                        <a href="site-visit.html" class="btn-primary">
+                            BOOK A SITE VISIT <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <!-- Col 1: Brand Info -->
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="brand-logo footer-logo" aria-label="Pink Oaks Bani Park">
+                        <img src="logo.webp" alt="Pink Oaks" class="footer-logo-img">
+                    </a>
+                    <p class="footer-subinfo">
+                        3 & 4 BHK BOUTIQUE RESIDENCES<br>
+                        18 EXCLUSIVE HOMES
+                    </p>
+                    <p class="footer-rera">RERA No. RAJ/P/2025/3489</p>
+                    <p class="copyright">© 2025 Pink Oaks. All rights reserved.</p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-col-heading">QUICK LINKS</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="address.html">Address</a></li>
+                        <li><a href="residences.html">Residences</a></li>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="residences.html#floor-plans">Floor Plans</a></li>
+                        <li><a href="site-visit.html">Site Visit</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div class="footer-col">
+                    <h4 class="footer-col-heading">CONTACT</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                            <a href="tel:9772297772">97722-97772</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                            <a href="mailto:hello@pinkoaksjaipur.com">hello@pinkoaksjaipur.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                            <span>Bani Park, Jaipur, Rajasthan 302016</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Follow Us -->
+                <div class="footer-col">
+                    <h4 class="footer-col-heading">FOLLOW US</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram" class="social-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="WhatsApp" class="social-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="sep">|</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+                    ↑
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal 1: Floor Plan Detail Viewer -->
+    <div class="modal-overlay" id="modal-floorplan" role="dialog" aria-modal="true">
+        <div class="modal-card modal-large">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="floral-motif">❖</div>
+                <h3 class="modal-title" id="fp-modal-title">ARCHITECTURAL FLOOR PLAN</h3>
+                <p class="modal-sub" id="fp-modal-sub">3 BHK / 4 BHK Residences at Pink Oaks, Bani Park</p>
+            </div>
+
+            <!-- Tab switcher -->
+            <div class="plan-tabs">
+                <button class="tab-btn active" data-tab="flat-a">FLAT A (3 BHK - 1885 sq.ft)</button>
+                <button class="tab-btn" data-tab="flat-b">FLAT B (3 BHK - 1720 sq.ft)</button>
+                <button class="tab-btn" data-tab="flat-c">FLAT C (4 BHK - 2350 sq.ft)</button>
+            </div>
+
+            <div class="plan-display-area">
+                <div class="plan-interactive-view">
+                    <div class="floorplan-svg-container" id="floorplan-graphic">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <div class="plan-details-sidebar">
+                    <h4 class="details-heading">Residence Highlights</h4>
+                    <ul class="specs-checklist" id="fp-specs-list">
+                        <!-- Loaded dynamically -->
+                    </ul>
+                    <div class="sidebar-cta">
+                        <a href="site-visit.html" class="btn-primary btn-sm">
+                            BOOK VISIT FOR THIS UNIT <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Download e-Brochure -->
+    <div class="modal-overlay" id="modal-brochure" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="floral-motif">❖</div>
+                <h3 class="modal-title">DOWNLOAD E-BROCHURE</h3>
+                <p class="modal-sub">Get immediate access to high-res floor plans, specifications & price sheets.</p>
+            </div>
+
+            <form class="brochure-form" id="brochure-form">
+                <div class="form-group">
+                    <label for="brochure-name">Full Name *</label>
+                    <input type="text" id="brochure-name" required placeholder="e.g. Ananya Roy">
+                </div>
+
+                <div class="form-group">
+                    <label for="brochure-email">Email Address *</label>
+                    <input type="email" id="brochure-email" required placeholder="name@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="brochure-phone">WhatsApp / Mobile Number *</label>
+                    <input type="tel" id="brochure-phone" required placeholder="e.g. 98290 12345">
+                </div>
+
+                <button type="submit" class="btn-primary btn-block">
+                    DOWNLOAD PDF BROCHURE <span class="arrow">↓</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 3: Lightbox -->
+    <div class="modal-overlay" id="modal-lightbox" role="dialog" aria-modal="true">
+        <div class="modal-card modal-large modal-lightbox-card">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="lightbox-viewer" id="lightbox-viewer"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast-msg"></div>
+
+    <!-- GSAP & Lenis Motion Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- Leaflet JS Library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>

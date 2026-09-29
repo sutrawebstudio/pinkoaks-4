@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the prime location and address of Pink Oaks in Bani Park, Jaipur. Connected to MI Road, C-Scheme, Railway Station and City Palace.">
+    <title>Address & Location | Pink Oaks Bani Park, Jaipur</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="site-preloader" id="site-preloader">
+        <div class="preloader-content">
+            <img src="logo.webp" alt="Pink Oaks" class="preloader-logo-img">
+            <div class="preloader-sub">BANI PARK, JAIPUR</div>
+            <div class="preloader-bar-wrap">
+                <div class="preloader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo" aria-label="Pink Oaks Bani Park">
+                <img src="logo.webp" alt="Pink Oaks" class="site-logo-img">
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="address.html" class="nav-link active">ADDRESS</a></li>
+                    <li><a href="residences.html" class="nav-link">RESIDENCES</a></li>
+                    <li><a href="amenities.html" class="nav-link">AMENITIES</a></li>
+                    <li><a href="residences.html#floor-plans" class="nav-link">FLOOR PLANS</a></li>
+                    <li><a href="site-visit.html" class="nav-link">SITE VISIT</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:9772297772" class="btn-phone">
+                    <svg class="icon-phone" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>97722-97772</span>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <!-- Inner Page Hero Header -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="floral-motif">❖</div>
+                <h1 class="page-hero-title">A CONNECTED ADDRESS</h1>
+                <p class="page-hero-sub">Situated in Bani Park — Jaipur's premier heritage avenue. Close to fine dining, royal landmarks, and effortless transport connections.</p>
+            </div>
+        </section>
+
+        <!-- Connected Address Main Section -->
+        <section class="location-section" id="location" style="padding-top: 40px;">
+            <div class="container">
+                <div class="location-grid">
+                    <div class="map-container">
+                        <div id="theme-map" class="theme-map-box"></div>
+                        <div class="map-badge-overlay">
+                            <span class="badge-icon">❖</span>
+                            <span class="badge-title">PINK OAKS — BANI PARK</span>
+                        </div>
+                    </div>
+
+                    <div class="location-text">
+                        <div class="floral-motif">❖</div>
+                        <h2 class="section-title">THE HEART OF BANI PARK</h2>
+                        <span class="location-subhead">JAIPUR, RAJASTHAN</span>
+                        <p class="location-paragraph">
+                            An address that keeps you close to everything that matters — top schools, super-specialty hospitals, high-street shopping, and cultural landmarks.
+                        </p>
+
+                        <!-- Filter category tabs -->
+                        <div class="location-filter-tabs">
+                            <button class="loc-tab active" data-filter="all">ALL</button>
+                            <button class="loc-tab" data-filter="transit">CONNECTIVITY</button>
+                            <button class="loc-tab" data-filter="shopping">SHOPPING & HERITAGE</button>
+                        </div>
+
+                        <ul class="distance-list">
+                            <li class="distance-item" data-landmark="mi-road" data-type="shopping">
+                                <span class="place-name"><svg class="pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> M.I. Road</span>
+                                <span class="dots"></span>
+                                <span class="time-value">5 mins</span>
+                            </li>
+                            <li class="distance-item" data-landmark="railway" data-type="transit">
+                                <span class="place-name"><svg class="pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Railway Station</span>
+                                <span class="dots"></span>
+                                <span class="time-value">10 mins</span>
+                            </li>
+                            <li class="distance-item" data-landmark="cscheme" data-type="shopping">
+                                <span class="place-name"><svg class="pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> C-Scheme</span>
+                                <span class="dots"></span>
+                                <span class="time-value">10 mins</span>
+                            </li>
+                            <li class="distance-item" data-landmark="citypalace" data-type="shopping">
+                                <span class="place-name"><svg class="pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> City Palace</span>
+                                <span class="dots"></span>
+                                <span class="time-value">15 mins</span>
+                            </li>
+                            <li class="distance-item" data-landmark="airport" data-type="transit">
+                                <span class="place-name"><svg class="pin-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Jaipur International Airport</span>
+                                <span class="dots"></span>
+                                <span class="time-value">25 mins</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Neighborhood Highlights Grid -->
+        <section class="spotlight-section" style="background-color: var(--color-bg-secondary); border-top: 1px solid var(--color-border);">
+            <div class="container">
+                <div class="section-header-center">
+                    <div class="floral-motif">❖</div>
+                    <h2 class="section-title">NEIGHBORHOOD ADVANTAGES</h2>
+                    <p class="section-subtext">Everything you need for a refined lifestyle within arm's reach.</p>
+                </div>
+
+                <div class="pillars-grid pillars-grid-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon icon-bg-pink">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
+                        </div>
+                        <h3 class="pillar-title">HERITAGE & ROYALTY</h3>
+                        <p class="pillar-desc">Minutes from City Palace, Hawa Mahal, and Albert Hall Museum.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon icon-bg-blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M12 3v8M8 19l-2 3M16 19l2 3"/></svg>
+                        </div>
+                        <h3 class="pillar-title">EFFORTLESS TRANSIT</h3>
+                        <p class="pillar-desc">10 mins to Jaipur Junction Railway Station & Metro corridors.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon icon-bg-taupe">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+                        </div>
+                        <h3 class="pillar-title">HIGH-STREET RETAIL</h3>
+                        <p class="pillar-desc">Surrounded by M.I. Road, C-Scheme boutiques & luxury dining.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-icon icon-bg-sage">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <h3 class="pillar-title">HEALTHCARE & EDUCATION</h3>
+                        <p class="pillar-desc">Top multi-specialty hospitals and premier educational institutes nearby.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="brand-logo footer-logo" aria-label="Pink Oaks Bani Park">
+                        <img src="logo.webp" alt="Pink Oaks" class="footer-logo-img">
+                    </a>
+                    <p class="footer-subinfo">3 & 4 BHK BOUTIQUE RESIDENCES<br>18 EXCLUSIVE HOMES</p>
+                    <p class="footer-rera">RERA No. RAJ/P/2025/3489</p>
+                    <p class="copyright">© 2025 Pink Oaks. All rights reserved.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-heading">QUICK LINKS</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="address.html">Address</a></li>
+                        <li><a href="residences.html">Residences</a></li>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="residences.html#floor-plans">Floor Plans</a></li>
+                        <li><a href="site-visit.html">Site Visit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-heading">CONTACT</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                            <a href="tel:9772297772">97722-97772</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                            <a href="mailto:hello@pinkoaksjaipur.com">hello@pinkoaksjaipur.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                            <span>Bani Park, Jaipur, Rajasthan 302016</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-heading">FOLLOW US</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram" class="social-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="WhatsApp" class="social-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="sep">|</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast-msg"></div>
+
+    <!-- GSAP & Lenis Motion Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- Leaflet JS Library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>
